@@ -1,0 +1,285 @@
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	 <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>NotImplementedFunction</Title>
+			<Author>Zhu Chun</Author>
+			<Description>Create a function with a TODO comment and NotImplementedException</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType> 
+			</SnippetTypes>
+			<Shortcut>NotImplementedFunction</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+			<Literal>
+					<ID>name0</ID>
+					<Default>Foo</Default>			
+				</Literal>				
+<Literal Editable="false">
+                    <ID>System</ID> 
+                    <Function>SimpleTypeName(global::System)</Function> 
+                </Literal>				
+			</Declarations>
+			<Code Language="csharp"><![CDATA[public void $name0$() {
+        //TODO: $name0$
+        throw new $System$.NotImplementedException();
+    }]]></Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	 <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Foo</Title>
+			<Author>Zhu Chun</Author>
+			<Description>Create a dummy function</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType> 
+			</SnippetTypes>
+			<Shortcut>foo</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>				
+			<Literal>
+					<ID>type0</ID>
+					<Default>void</Default>			
+				</Literal>						
+				<Literal>
+					<ID>name0</ID>
+					<Default>Foo</Default>			
+				</Literal>			<Literal>
+					<ID>parm0</ID>
+					<Default>GameObject go</Default>			
+				</Literal>				
+			</Declarations>
+			<Code Language="csharp"><![CDATA[
+	public $type0$ $name0$($parm0$) {
+       
+    }]]></Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Singleton</Title>
+			<Author>Zhu Chun</Author>
+			<Description>Create a singleton and Awake() for this class, useful for global "Manager" class</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType> 
+			</SnippetTypes>
+			<Shortcut>singleton</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+			<Literal>
+					<ID>class0</ID>
+					<Function>ClassName()</Function>	
+				</Literal>	
+				<Literal>
+					<ID>name0</ID>
+					<Default>Instance</Default>			
+				</Literal>				
+			</Declarations>
+			<Code Language="csharp"><![CDATA[ public static $class0$ $name0$;
+			
+    void Awake() {
+        if ($name0$==null)
+        {
+            $name0$ = this;    
+        }
+        else
+        {
+            Debug.LogError("$class0$: More than 1 $name0$ in the secne.");
+        }
+    }]]></Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>GetComponent</Title>
+			<Author>Zhu Chun</Author>
+			<Description>A GetComponent sentence.</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType> 
+			</SnippetTypes>
+			<Shortcut>GetComponent</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+			<Literal>
+					<ID>type0</ID>
+					<Default>Transform</Default>		
+				</Literal>	
+				<Literal>
+					<ID>name0</ID>
+					<Default>field</Default>			
+				</Literal>				
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$type0$ $name0$ = GetComponent<$type0$>();]]></Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Debug.Log</Title>
+			<Author>Zhu Chun</Author>
+			<Description>Debug.Log</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType> 
+			</SnippetTypes>
+			<Shortcut>log</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>class0</ID>
+					<Function>ClassName()</Function>	
+				</Literal>			
+<Literal>
+					<ID>foo0</ID>
+					<Default>Say Something.</Default>			
+				</Literal>								
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Debug.Log("$class0$: $foo0$");]]></Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Debug.Log with String.Format</Title>
+			<Author>Zhu Chun</Author>
+			<Description>Debug.Log with String.Format</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType> 
+			</SnippetTypes>
+			<Shortcut>logF</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>class0</ID>
+					<Function>ClassName()</Function>	
+				</Literal>			
+<Literal>
+					<ID>foo0</ID>
+					<Default>Say Something.</Default>			
+				</Literal>								
+				<Literal>
+					<ID>var0</ID>
+					<Default>Variables</Default>	
+				</Literal>		
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Debug.LogFormat("$class0$: $foo0$",$var0$);]]></Code>
+		</Snippet>
+	</CodeSnippet>	
+ 
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Debug.Warning</Title>
+			<Author>Zhu Chun</Author>
+			<Description>Debug.Warning</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType> 
+			</SnippetTypes>
+			<Shortcut>warning</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>class0</ID>
+					<Function>ClassName()</Function>	
+				</Literal>			
+<Literal>
+					<ID>foo0</ID>
+					<Default>Say Something.</Default>			
+				</Literal>								
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Debug.LogWarning("$class0$: $foo0$");]]></Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Debug.Log with String.Format</Title>
+			<Author>Zhu Chun</Author>
+			<Description>Debug.Log with String.Format</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType> 
+			</SnippetTypes>
+			<Shortcut>warningF</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>class0</ID>
+					<Function>ClassName()</Function>	
+				</Literal>			
+<Literal>
+					<ID>foo0</ID>
+					<Default>Say Something.</Default>			
+				</Literal>								
+				<Literal>
+					<ID>var0</ID>
+					<Default>Variables</Default>	
+				</Literal>		
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Debug.LogWarningFormat("$class0$: $foo0$",$var0$);]]></Code>
+		</Snippet>
+	</CodeSnippet>
+	
+ 
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Debug.Error</Title>
+			<Author>Zhu Chun</Author>
+			<Description>Debug.Error</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType> 
+			</SnippetTypes>
+			<Shortcut>error</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>class0</ID>
+					<Function>ClassName()</Function>	
+				</Literal>			
+<Literal>
+					<ID>foo0</ID>
+					<Default>Say Something.</Default>			
+				</Literal>								
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Debug.LogError("$class0$: $foo0$");]]></Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Debug.LogError with Format</Title>
+			<Author>Zhu Chun</Author>
+			<Description>Debug.LogError with Format</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType> 
+			</SnippetTypes>
+			<Shortcut>errorF</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>class0</ID>
+					<Function>ClassName()</Function>	
+				</Literal>			
+<Literal>
+					<ID>foo0</ID>
+					<Default>Say Something.</Default>			
+				</Literal>								
+				<Literal>
+					<ID>var0</ID>
+					<Default>Variables</Default>	
+				</Literal>		
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Debug.LogErrorFormat("$class0$: $foo0$",$var0$);]]></Code>
+		</Snippet>
+	</CodeSnippet>
+	
+</CodeSnippets>
