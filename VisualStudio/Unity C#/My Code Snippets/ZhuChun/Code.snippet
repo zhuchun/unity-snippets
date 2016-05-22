@@ -93,31 +93,7 @@
     }]]></Code>
 		</Snippet>
 	</CodeSnippet>
-	
-	<CodeSnippet Format="1.0.0">
-		<Header>
-			<Title>GetComponent</Title>
-			<Author>Zhu Chun</Author>
-			<Description>GetComponent and assign a variable.</Description>
-			<SnippetTypes>
-				<SnippetType>Expansion</SnippetType> 
-			</SnippetTypes>
-			<Shortcut>getComponent</Shortcut>
-		</Header>
-		<Snippet>
-			<Declarations>
-			<Literal>
-					<ID>type0</ID>
-					<Default>Transform</Default>		
-				</Literal>	
-				<Literal>
-					<ID>name0</ID>
-					<Default>field</Default>			
-				</Literal>				
-			</Declarations>
-			<Code Language="csharp"><![CDATA[$type0$ $name0$ = GetComponent<$type0$>();]]></Code>
-		</Snippet>
-	</CodeSnippet>
+	 
 	
 	<CodeSnippet Format="1.0.0">
 		<Header>
@@ -301,6 +277,27 @@
 			</Declarations>
 			<Code Language="csharp"><![CDATA[ public delegate void $foo0$Dlg();
     public event $foo0$Dlg On$foo0$;]]></Code>
+		</Snippet>
+	</CodeSnippet>
+	
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Require Component header</Title>
+			<Author>Zhu Chun</Author>
+			<Description>Create a require component header</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType> 
+			</SnippetTypes>
+			<Shortcut>requireComponent</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>			 	
+<Literal>
+					<ID>foo0</ID>
+					<Default>Transform</Default>			
+				</Literal>												
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[RequireComponent(typeof($foo0$))]]]></Code>
 		</Snippet>
 	</CodeSnippet>
 	
